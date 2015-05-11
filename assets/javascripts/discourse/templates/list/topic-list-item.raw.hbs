@@ -1,0 +1,62 @@
+{{#unless controller.hideCategory}}
+  {{#unless topic.isPinnedUncategorized}}
+    <td class='category'>
+      <a href="{{ topic.category.url }}" class="category-icon" title="{{topic.category.name}}"> <svg class="category-icon" style='{{topic.category.svgFill}}'><use xlink:href="#shape--{{topic.category.fullSlug}}"></use></svg></a>
+    </td>
+  {{/unless}}
+{{/unless}}
+
+{{#if controller.bulkSelectEnabled}}
+  <td class='star'>
+    <input type="checkbox" class="bulk-select">
+  </td>
+{{/if}}
+
+<td class='main-link clearfix' colspan="{{titleColSpan}}">
+{{raw "topic-status" topic=topic}}
+{{topic-link topic}}
+
+{{#if controller.showTopicPostBadges}}
+{{raw "topic-post-badges" unread=topic.unread newPosts=topic.displayNewPosts unseen=topic.unseen url=topic.lastUnreadUrl}}
+{{/if}}
+
+{{#if expandPinned}}
+{{raw "list/topic-excerpt" topic=topic}}
+{{/if}}
+
+{{#unless controller.hideCategory}}
+  <a href="{{ topic.category.url }}" class="category-sub">{{ topic.category.name }}</a>
+{{/unless}}
+
+{{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
+</td>
+
+{{#if controller.showPosters}}
+  {{raw "list/posters-column" posters=topic.posters}}
+{{/if}}
+
+{{#if controller.showParticipants}}
+  {{raw "list/posters-column" posters=topic.participants}}
+{{/if}}
+
+{{#if controller.showLikes}}
+  <td class="num likes">
+    {{#if hasLikes}}
+      <a href='{{topic.summaryUrl}}'>
+        {{number topic.like_count}} <i class='fa fa-heart'></i></td>
+      </a>
+    {{/if}}
+{{/if}}
+
+{{#if controller.showOpLikes}}
+  <td class="num likes">
+    {{#if hasOpLikes}}
+      <a href='{{topic.summaryUrl}}'>
+        {{number topic.op_like_count}} <i class='fa fa-heart'></i></td>
+      </a>
+    {{/if}}
+{{/if}}
+
+{{raw "list/posts-count-column" topic=topic}}
+
+{{raw "list/activity-column" topic=topic class="num" tagName="td"}}
