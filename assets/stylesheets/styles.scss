@@ -1,8 +1,13 @@
 $brand-color: #F7CA18;
+$sans-serif: 'Source Sans Pro', sans-serif;
 
 
 html {
-      font-family: 'Source Sans Pro', sans-serif;
+      font-family: $sans-serif;
+}
+
+body input, body button, body select, body textarea {
+  font-family: inherit;
 }
 
 .container {
