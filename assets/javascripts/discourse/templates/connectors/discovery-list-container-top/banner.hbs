@@ -1,0 +1,9 @@
+{{#unless currentUser}}
+  <section class="guest-banner">
+    <h4 class="guest-banner__headline">Hey, wir sind Designer & Entwickler. Eine Community.</h4>
+    {{#if showSignUpButton}}
+          {{d-button action="showCreateAccount" class="btn-primary btn--guest-banner" label="sign_up"}}
+        {{/if}}
+        {{d-button action="showLogin" class="btn-primary btn--guest-banner" icon="user" label="log_in"}}
+  </section>
+{{/unless}}

@@ -140,3 +140,43 @@ a.category-sub {
 .topic-list .topic-excerpt {
   clear: left;
 }
+/*------------------------------------*\
+    #GUEST BANNER
+\*------------------------------------*/
+
+.guest-banner {
+  display: flex;
+  height: 100px;
+  margin-bottom: 18px;
+  background: url("/images/guest-banner-background.png") no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: flex-end;
+  @media (max-width: 850px) {
+    display: none;
+  }
+
+  &:hover .btn--guest-banner {
+    color: #000;
+    background-color: $brand-color;
+  }
+}
+
+.guest-banner__headline {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: .05rem;
+  color: #bcbcc5;
+  text-shadow: 0 1px 3px black;
+}
+
+.btn--guest-banner {
+  margin: 0 10%;
+  padding: 7px 15px;
+  color: #000;
+  border-radius: 50px;
+  background-color: #fff;
+  &:hover {
+    box-shadow: inset 0 0 0 2px white;
+  }
+}
