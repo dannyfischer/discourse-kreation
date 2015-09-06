@@ -4,5 +4,4 @@
 # author: Danny Fischer – Danny.fm
 # url: https://www.github.com/DannyFischer/discourse-kreation
 
-register_asset "javascripts/kreation.js"
 register_asset "stylesheets/styles.scss"
