@@ -221,6 +221,23 @@ a.category-sub {
 }
 
 
+/*------------------------------------*\
+    #CATEGORY
+\*------------------------------------*/
+#list-area .categories .has-description td.category,
+#list-area .categories td.category {
+  padding: 3rem;
+}
+
+.topic-list.categories td.category,
+.topic-list.categories td.latest {
+  vertical-align: middle;
+}
+
+.topic-list.categories a.title {
+  font-weight: 600;
+}
+
 
 /*------------------------------------*\
     #USER-PROFILE
