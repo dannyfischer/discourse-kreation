@@ -137,6 +137,9 @@ body textarea {
 body .bootbox.modal .modal-footer a.btn-primary,
 .names span a {
   color: #000;
+  &:hover {
+    color: #fff;
+  }
 }
 
 .nav-pills > li > a:hover {
