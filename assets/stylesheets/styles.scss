@@ -92,7 +92,7 @@ body textarea {
 
 .d-dropdown,
 .dropdown-menu,
-#user-card,
+.not-mobile-device #user-card,
 .list-controls .category-dropdown-menu {
   padding: 6px;
   border: none;
@@ -183,10 +183,6 @@ body .bootbox.modal .modal-footer a.btn-primary,
 
 .extra-info-wrapper .badge-wrapper.bar span.badge-category {
   font-weight: 400;
-}
-
-.mobile-view .category {
-  display: none;
 }
 
 .discourse-tag,
