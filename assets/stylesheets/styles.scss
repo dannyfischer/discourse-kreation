@@ -108,6 +108,11 @@ body textarea {
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
 }
 
+.menu-panel ul.menu-links li a:hover,
+.menu-panel ul li.heading a:hover {
+  background-color: initial;
+  color: #000;
+}
 
 
 /*------------------------------------*\
