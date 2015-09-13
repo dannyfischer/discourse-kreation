@@ -139,8 +139,7 @@ body textarea {
   background-color: $brand-color;
 }
 
-body .bootbox.modal .modal-footer a.btn-primary,
-.names span a {
+body .bootbox.modal .modal-footer a.btn-primary {
   color: #000;
   &:hover {
     color: #fff;
@@ -222,6 +221,10 @@ a.category-sub {
 
 .topic-list .topic-excerpt {
   clear: left;
+}
+
+.names span a {
+  color: #000;
 }
 
 
