@@ -313,6 +313,12 @@ a.category-sub {
     #MOBILE VIEW
 \*------------------------------------*/
 
-.mobile-view td.category {
-  display: none;
+.mobile-view {
+  td.category,
+  td.posters {
+    display: none;
+  }
+  td.posts-map {
+    display: table-cell;
+  }
 }
